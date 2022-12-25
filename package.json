@@ -1,0 +1,17 @@
+{
+  "name": "fifa_team_generator",
+  "version": "1.0.0",
+  "description": "winter project",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Tahyr Bayryyev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "handlebars": "^4.7.7",
+    "mongodb": "^4.13.0"
+  }
+}
