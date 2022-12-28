@@ -21,7 +21,8 @@ async function createTeam(team_name,team_image,star_rating,league){
         _id : ObjectId(),
         name : team_name,
         image: team_image,
-        league: league
+        league: league,
+        rating: rating
 
     }
 
