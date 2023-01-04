@@ -73,7 +73,26 @@ async function getLeagues(){
 
 }
 
-async function generateTeams(){
+async function generateTeams(rating){
+    // make sure the rating of the teams inputted is valid
+    rating = validation.checkRating(rating);
+
+    
+
+    const team_collection = await teams();
+    teamsGenerated = []
+
+    const team_list = await team_collection.find({}).toArray();
+
+    
+
+
+    if(teamsGenerated.length != 2){
+        throw "random teams could not be successfully generated";
+    }
+
+
+    return teamsGenerated;
 
 }
 
