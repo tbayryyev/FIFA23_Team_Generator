@@ -149,9 +149,16 @@ async function main(){
         console.log("Got an error.");
         console.log(e);
     }
+    try {
+        leagues = await teams.getLeagues();
+        console.log(leagues);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
 
-    leagues = await teams.get_leagues();
-    console.log(leagues);
+
+    
     
 
 
