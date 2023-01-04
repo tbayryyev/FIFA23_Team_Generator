@@ -150,6 +150,10 @@ async function main(){
         console.log(e);
     }
 
+    leagues = await teams.get_leagues();
+    console.log(leagues);
+    
+
 
 
 

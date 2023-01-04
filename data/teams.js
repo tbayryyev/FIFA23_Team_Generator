@@ -24,10 +24,10 @@ async function createTeam(team_name,team_image,star_rating,league){
         league: league,
         rating: rating
 
-    }
+    };
 
     // inserting the new team into the DB
-    const team_collection = await teams()
+    const team_collection = await teams();
     const insertInfo = await team_collection.insertOne(new_team);
 
 
@@ -39,10 +39,7 @@ async function createTeam(team_name,team_image,star_rating,league){
 
     new_team._id = new_team._id.toString();
 
-
-
-
-    return new_team
+    return new_team;
 
 
 
@@ -50,7 +47,29 @@ async function createTeam(team_name,team_image,star_rating,league){
 
 async function get_leagues(){
     const team_collection = await teams();
-    
+    leagues = [];
+
+    // go through the teams databsae and return the league of each team in an array
+    const leagues_list = await team_collection.find({}, {
+        projection: {
+            _id: 0,league:1
+
+        }
+    }).toArray();
+
+    // checking if there are no leagues in the database throw an error if there are none
+    if(leagues_list.length == 0){
+        throw "Currently there are no leagues in the Database";
+    }
+
+    // get a list of leagues with no duplicates
+    leagues_list.forEach(value => {
+        if(leagues.indexOf(value["league"]) == -1){
+            leagues.push(value["league"]);
+        }
+    });
+
+    return leagues;
 
 }
 
