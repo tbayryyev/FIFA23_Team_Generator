@@ -73,7 +73,7 @@ async function getLeagues(){
 
 }
 
-async function generateTeams(rating){
+async function generateTeams(rating,league){
     // make sure the rating of the teams inputted is valid
     rating = validation.checkRating(rating);
 
@@ -82,14 +82,24 @@ async function generateTeams(rating){
     const team_collection = await teams();
     teamsGenerated = []
 
-    const team_list = await team_collection.find({}).toArray();
+    const team_list = await team_collection.find({league:league, rating:rating}).toArray();
 
-    
-
-
-    if(teamsGenerated.length != 2){
-        throw "random teams could not be successfully generated";
+    if(team_list.length < 2){
+        throw "not enough teams in this league with this rating to generate two teams"
     }
+    
+    random_number = Math.floor(Math.random() * team_list.length);
+    random_number2 = Math.floor(Math.random() * team_list.length);
+
+    while(random_number == random_number2){
+        random_number2 = Math.floor(Math.random() * team_list.length);
+
+    }
+
+    teamsGenerated.push(team_list[random_number]);
+    teamsGenerated.push(team_list[random_number2]);
+
+
 
 
     return teamsGenerated;
