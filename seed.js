@@ -159,6 +159,8 @@ async function main(){
     //    console.log(e);
     //}
 
+    // trying out generateTeams() function
+    console.log("the generated teams below");
     try {
         teams_generated = await teams.generateTeams(5.0,"Premier League")
         console.log(teams_generated);

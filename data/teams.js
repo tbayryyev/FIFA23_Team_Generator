@@ -82,20 +82,25 @@ async function generateTeams(rating,league){
     const team_collection = await teams();
     teamsGenerated = []
 
+    // find all teams in the DB with the given league and rating 
     const team_list = await team_collection.find({league:league, rating:rating}).toArray();
+    
 
     if(team_list.length < 2){
         throw "not enough teams in this league with this rating to generate two teams"
     }
     
+    // generate two random numbers
     random_number = Math.floor(Math.random() * team_list.length);
     random_number2 = Math.floor(Math.random() * team_list.length);
 
+    // keep generating the second number until it is different from the first
     while(random_number == random_number2){
         random_number2 = Math.floor(Math.random() * team_list.length);
 
     }
 
+    // add the two random team objects to the array
     teamsGenerated.push(team_list[random_number]);
     teamsGenerated.push(team_list[random_number2]);
 
