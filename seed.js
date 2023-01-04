@@ -51,6 +51,106 @@ async function main(){
         console.log("Got an error.");
         console.log(e);
     }
+    try {
+        West_ham = await teams.createTeam("West Ham United","https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/West_Ham_United_FC_logo.svg/1200px-West_Ham_United_FC_logo.svg.png",4.5,"Premier League");
+        console.log(West_ham);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Leicester_City = await teams.createTeam("Leicester City","https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Leicester_City_crest.svg/1200px-Leicester_City_crest.svg.png",4.5,"Premier League");
+        console.log(Leicester_City);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Aston_Villa = await teams.createTeam("Aston Villa","https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/800px-Aston_Villa_FC_crest_%282016%29.svg.png",4.5,"Premier League");
+        console.log(Aston_Villa);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Wolverhampton_Wanderers = await teams.createTeam("Wolverhampton Wanderers","https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Wolverhampton_Wanderers.svg/1200px-Wolverhampton_Wanderers.svg.png",4.0,"Premier League");
+        console.log(Wolverhampton_Wanderers);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Newcastle_United = await teams.createTeam("Newcastle United","https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Newcastle_United_Logo.svg/1200px-Newcastle_United_Logo.svg.png",4.0,"Premier League");
+        console.log(Newcastle_United);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Everton = await teams.createTeam("Everton","https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/1200px-Everton_FC_logo.svg.png",4.0,"Premier League");
+        console.log(Everton);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Leeds_United = await teams.createTeam("Leeds United","https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Leeds_United_F.C._logo.svg/800px-Leeds_United_F.C._logo.svg.png",4.0,"Premier League");
+        console.log(Leeds_United);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Brighton = await teams.createTeam("Brighton & Hove Albion","https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png",4.0,"Premier League");
+        console.log(Brighton);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Crystal_Palace = await teams.createTeam("Crystal Palace","https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Crystal_Palace_FC_logo_%282022%29.svg/1200px-Crystal_Palace_FC_logo_%282022%29.svg.png",4.0,"Premier League");
+        console.log(Crystal_Palace);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Southampton = await teams.createTeam("Southampton","https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/FC_Southampton.svg/800px-FC_Southampton.svg.png",4.0,"Premier League");
+        console.log(Southampton);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Fulham = await teams.createTeam("Fulham","https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Fulham_FC_%28shield%29.svg/1200px-Fulham_FC_%28shield%29.svg.png",4.0,"Premier League");
+        console.log(Fulham);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Brentford = await teams.createTeam("Brentford","https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Brentford_FC_crest.svg/1200px-Brentford_FC_crest.svg.png",4.0,"Premier League");
+        console.log(Brentford);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        Nottingham_Forest = await teams.createTeam("Nottingham Forest","https://upload.wikimedia.org/wikipedia/fr/thumb/3/37/Logo_Nottingham_Forest_FC.svg/1200px-Logo_Nottingham_Forest_FC.svg.png",3.5,"Premier League");
+        console.log(Nottingham_Forest);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+    try {
+        AFC_Bournemouth = await teams.createTeam("AFC Bournemouth","https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/AFC_Bournemouth_%282013%29.svg/1200px-AFC_Bournemouth_%282013%29.svg.png",3.5,"Premier League");
+        console.log(AFC_Bournemouth);
+    } catch (e) {
+        console.log("Got an error.");
+        console.log(e);
+    }
+
+
 
 
     await connection.closeConnection();

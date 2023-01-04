@@ -48,4 +48,10 @@ async function createTeam(team_name,team_image,star_rating,league){
 
 }
 
-module.exports= {createTeam};
+async function get_leagues(){
+    const team_collection = await teams();
+    
+
+}
+
+module.exports= {createTeam,get_leagues};
