@@ -8,9 +8,10 @@ router
     .route('')
     .get(async (req, res) => {
         try {
-            res.json("we are at this page");
+            res.render('pages/main_page');
         } catch (e) {
-            res.status(404).json({ error: 'Id not found' });
+            console.log(e);
+            res.status(404).json(e);
         }
     });
 
