@@ -5,6 +5,39 @@
     </div>
   </div>
 </div>Here you
+<div>
  <p>Welcome to the FIFA 23 Random Team Generator!</p>
- <p> Here you can generate 2 random teams with the same rating in FIFA 23 to make the kick off mode more fun and exciting for you and your friends! </p>
+ <p> Here you can generate 2 random teams with the same rating and league in FIFA 23 to make the kick off mode more fun and exciting for you and your friends! </p>
+ </div> 
+<form action="/teams" method="POST" class="new-keyword-form">
+<div>
+        <label for="league">Select a league: </label>
+        <select name="league" id="league">
+        <option value="Premier League">Premier League</option>
+        <option value="Serie A">Serie A</option>
+        <option value="LaLiga">LaLiga</option>
+        <option value="Bundesliga">Bundesliga</option>
+        <option value="Ligue 1">Ligue 1</option>
+        </select>
+        </div>
+        <div>
+        <label for="rating"> Select a rating: </label>
+        <select name="rating" id="rating">
+        <option value="0.5">0.5</option>
+        <option value="1.0">1.0</option>
+        <option value="1.5">1.5</option>
+        <option value="2.0">2.0</option>
+        <option value="2.5">2.5</option>
+        <option value="3.0">3.0</option>
+        <option value="3.5">3.5</option>
+        <option value="4.0">4.0</option>
+        <option value="4.5">4.5</option>
+        <option value="5.0">5.0</option>
+        </select>
+        </div>
+         <div>
 
+        <button type="submit">Generate my teams!</button>
+         </div>
+
+</form>

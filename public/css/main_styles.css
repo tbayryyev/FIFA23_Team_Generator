@@ -62,3 +62,20 @@ p{
   font-family: 'Times New Roman', Times, serif;
 }
 
+label{
+  color:white;
+}
+div {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+a{
+  color:white;
+  font-size: 20px;
+
+}
+
+a:hover{
+  color:lightblue;
+}

@@ -15,6 +15,21 @@ router
         }
     });
 
+router
+    .route('/teams')
+    .post(async (req, res) => {
+        try {
+            let rating = Number(req.body.rating);
+            let league = req.body.league;
+            const teams = await teamsData.generateTeams(rating,league);
+            res.render('pages/teams', {team1: teams[0], team2: teams[1] });
+
+
+        } catch (e) {
+            res.status(400).json({Error: e})
+        }
+    });
+
 
 
 
