@@ -58,7 +58,7 @@ body{
 }
 p{
   color: white;
-  font-size: 25px;
+  font-size: 30px;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -78,4 +78,27 @@ a{
 
 a:hover{
   color:lightblue;
+}
+
+img{
+  height: 300px
+}
+
+div.teams{
+  width: 50%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    
+ 
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  
 }
