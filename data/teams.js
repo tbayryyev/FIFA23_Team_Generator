@@ -81,13 +81,27 @@ async function generateTeams(rating,league){
 
     const team_collection = await teams();
     teamsGenerated = []
+    let team_list;
 
-    // find all teams in the DB with the given league and rating 
-    const team_list = await team_collection.find({league:league, rating:rating}).toArray();
+    // if user chooses Any option then query all teams from all leagues with given rating
+    if(league === 'Any'){
+        team_list = await team_collection.find({rating:rating}).toArray();
+
+    }else{
+    // otherwise query teams from the league given with the given rating
+        team_list = await team_collection.find({league:league, rating:rating}).toArray();
+
+    }
+
+   
     
 
-    if(team_list.length < 2){
+    if(team_list.length < 2 && league!== 'Any'){
         throw "not enough teams in this league with this rating to generate two teams"
+    }
+
+    if(team_list.length < 2 && league=== 'Any'){
+        throw "not enough teams with this rating to generate two teams"
     }
     
     // generate two random numbers
