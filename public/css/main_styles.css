@@ -102,3 +102,19 @@ div.teams{
   grid-gap: 10px;
   
 }
+div.error{
+  background-color: white;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+
+    
+}
+p.error{
+  color:black;
+  margin-bottom: 10px;
+}
+h2{
+  font-size: 50px;
+}

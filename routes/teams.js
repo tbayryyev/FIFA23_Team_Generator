@@ -10,8 +10,7 @@ router
         try {
             res.render('pages/main_page');
         } catch (e) {
-            console.log(e);
-            res.status(404).json(e);
+            res.status(400).render('pages/error',{error: e})
         }
     });
 
@@ -26,7 +25,7 @@ router
 
 
         } catch (e) {
-            res.status(400).json({Error: e})
+            res.status(400).render('pages/error',{error: e})
         }
     });
 
