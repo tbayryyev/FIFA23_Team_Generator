@@ -160,14 +160,14 @@ async function main(){
     //}
 
     // trying out generateTeams() function
-    console.log("the generated teams below");
-    try {
-        teams_generated = await teams.generateTeams(5.0,"Premier League")
-        console.log(teams_generated);
-    } catch (e) {
-        console.log("Got an error.");
-        console.log(e);
-    }
+    //console.log("the generated teams below");
+    //try {
+    //    teams_generated = await teams.generateTeams(5.0,"Premier League")
+    //    console.log(teams_generated);
+    //} catch (e) {
+    //    console.log("Got an error.");
+    //    console.log(e);
+    //}
 
 
     
